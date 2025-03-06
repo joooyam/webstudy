@@ -1,0 +1,45 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <!-- 250228-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/mainLayout.css">
+
+</head>
+<body>
+<%@include file="header.jsp"%>
+<section>
+   <article>
+      <h2>사칙 연산 결과</h2>
+      <%
+      String num1_s=request.getParameter("num1");
+      
+      if(num1_s==null||num1_s.equals("")) {
+         num1_s="0";
+      }
+      int num1=Integer.parseInt(num1_s);
+      
+      String num2_s=request.getParameter("num2");
+      int num2=Integer.parseInt(num2_s);
+      //int num2=Integer.parseInt(request.getParameter("num2"));
+      //이렇게 하면 우효성 검사하기 전에 형변환 해주는 것이기 때문에 유효성 검사 의미 없음
+      //길더라도 위의 코드가 나음
+      
+      String oper_s=request.getParameter("oper");
+      char oper=oper_s.charAt(0); //0번째 인덱스 값 가져옴
+      int result=0;
+      switch(oper){
+      case '+':result=num1+num2;break;
+      case '-':result=num1-num2;break;
+      case '*':result=num1*num2;break;
+      case '/':result=num1/num2; 
+      }
+    %>
+   </article>
+</section>
+<%@include file="footer.jsp" %>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- 250305 -->
+<!-- 보여줄 거 아니므로 jsp삭제함 -->
+<jsp:useBean id="deto" class="com.yong.emp.EmpDTO"></jsp:useBean>

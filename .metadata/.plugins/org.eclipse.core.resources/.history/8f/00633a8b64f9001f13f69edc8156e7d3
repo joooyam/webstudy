@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%
+String name=request.getParameter("name");
+String age=request.getParameter("age");
+String addr=request.getParameter("addr");
+String tel=request.getParameter("tel");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>BeanTest_ok.jsp</h1>
+<jsp:useBean id="btest" class="com.yong.bean.BeanTest"></jsp:useBean>
+<jsp:setProperty property="name" name="btest" value="<%=name%>"/>
+<jsp:setProperty property="age" name="btest" value=<%=age %>/>
+<jsp:setProperty property="addr" name="btest" value=<%=addr %>/>
+<jsp:setProperty property="tel" name="btest" value=<%=tel %>/>
+
+<h3>이름:<jsp:getProperty property="name" name="btest" ></h3>
+<h3>나이 : <%btest.getAge(); %></h3>
+</body>
+</html>

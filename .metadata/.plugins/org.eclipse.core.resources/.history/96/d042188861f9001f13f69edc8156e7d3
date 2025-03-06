@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>실습 1</h2>
+	<form name="btest" action="BeanTest_ok">
+	<ul>
+		<li><label>이름 :</label> <input type="text" name="name"></li>
+		<li><label>나이 :</label> <input type="text" name="age"></li>
+		<li><label>주소 :</label> <input type="text" name="addr"></li>
+		<li><label>전화번호 :</label> <input type="text" name="tel"></li>
+	</ul>
+<div><input type="button" value="값 전달하기 "></div>
+</form>
+
+<jsp:setProperty property="name" name="btest" value="홍길동"/>
+<jsp:setProperty property="age" name="btest" value="20"/>
+<jsp:setProperty property="addr" name="btest" value="서울"/>
+<jsp:setProperty property="tel" name="btest" value="02-1234-5678">
+</body>
+</html>

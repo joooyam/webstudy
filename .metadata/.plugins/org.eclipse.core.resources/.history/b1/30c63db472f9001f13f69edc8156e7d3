@@ -1,0 +1,53 @@
+package com.yong.emp;
+
+import java.util.*;
+import java.sql.*;
+//DB 반복적으로 사용되는 3대 컴포넌트 connection, ps, rs
+///250305
+////DAO 비즈니스 로직 담당
+/////EmpAdd_ok.jsp에서 한 것을 행위만을 위임받는 것 DAO가 위임받음
+///insert update delete - 실행횟수를 기반으로 판단
+///jdbc에서 받는 값을 그대로 토스?
+///
+///
+public class EmpDAO {
+
+		private Connection conn;
+		private PreparedStatement ps;
+		private ResultSet rs;
+		
+		public EmpDAO() {
+			System.out.println("EmpDAO객체 생성됨 !");
+		}
+
+		/**사원등록 관련 메서드*/
+		public int empAdd(EmpDTO dto) {//변수 안쓰고 emp dto 모든 파일 가져옴 
+//			Class.forName("orcale.jdbc.dirver.OracleDriver"); //드라이버 얀걀
+		
+		//자원쓰는 코드에서는 Try catch 사용
+		try{
+			Class.forName("orcale.jdbc.dirver.OracleDriver"); //드라이버 메모리에 로딩
+			String url="jdbc:oracle:thin:@localhost:1521:xe";
+			String user="scott";
+			String pwd="1234";
+			Connection conn=DriverManager.getConnection(url,user,pwd);
+			String sql="insert into employee values(employee_idx.nextval,?,?,?)";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, dto.getName()); 
+			ps.setString(2, dto.getEmail());
+			ps.setString(3, dto.getDept());//dto가 가지고 있ㄴgetDept를 이용해 부서정보 가져옴
+			int count=ps.executeUpdate();// //카트만 끌고 다니면 됨
+			return count; // 자원 닫아줘야됨
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			return -1;// 나를 알려주는 것
+		}finally {
+			try {
+				ps.close();
+				conn.close();
+			}catch (Exception e2) {}
+		}
+		
+	}
+}

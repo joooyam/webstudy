@@ -1,0 +1,39 @@
+package com.yong.bean;
+
+public class BeanTest {
+	
+	private String name;
+	private int age;
+	private String addr;
+	private String tel;
+	// 1. 이름, 나이를 담을 멤버변수 선언
+	// 2. 은닉화
+	// 3. 생성자 호출
+
+	public BeanTest() {
+		System.out.println("BeanTest객체 생성됨 !");
+
+	}
+
+	// 4. 이름과 나이에 접근하기 위해서 공개된 메소드 생성(Getter,setter)
+	// Getter : 값을 저장하기 위한 목적
+	// Setter : 값을 전문적으로 반환하기 위한 목적 (반환타입 )
+	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.yong.servlet;
+
+public class ServletLifeCycle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
