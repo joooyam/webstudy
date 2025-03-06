@@ -61,7 +61,7 @@
             <tr>
                <td colspan="2" align="center">
                   <input type="submit" value="정보수정">
-                  <input type="button" value="취소하기" onclick="location.href='emp2.jsp'"> 
+                  <input type="button" value="취소하기" onclick="location.href='emp2.jsp'">
                </td>
             </tr>
          </table>
