@@ -10,11 +10,7 @@ public class EmpDTO {
 	private String dept;
 	
 	public EmpDTO() {
-		System.out.println("EmpDTO객체 생성됨!");
-		
-		//인자 생성자 (generate기능 사용가능함
-		
-	
+
 	}
 	//source-generate Constructor using fields- generate)클릭
 	public EmpDTO(int idx, String name, String email, String dept) {

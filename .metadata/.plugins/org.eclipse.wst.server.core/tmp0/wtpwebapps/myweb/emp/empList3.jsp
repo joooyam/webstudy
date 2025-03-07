@@ -41,6 +41,8 @@ table th{
 			<tbody>
 			<%
 			ArrayList<EmpDTO> arr=edao.empListPart2();
+			
+			
 			if(arr==null || arr.size()==0){
 				%>
 			<tr>
