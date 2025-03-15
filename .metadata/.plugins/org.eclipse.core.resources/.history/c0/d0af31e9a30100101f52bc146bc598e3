@@ -1,0 +1,5 @@
+package com.yong.servlet;
+
+public class GuestCountServlet {
+
+}
