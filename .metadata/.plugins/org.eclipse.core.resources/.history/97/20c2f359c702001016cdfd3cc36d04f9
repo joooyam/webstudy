@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/myweb/mainLayout.css">
+<style>
+h2{
+	text-align: center;
+}
+table{
+	width:550px;
+	margin:0px auto;
+}
+table th{
+	background-color:skyblue;
+}
+</style>
+<script>
+
+</script>
+</head>
+<body>
+<%@include file="/header.jsp"%>
+<section>
+	<article>
+		<h2>심플자료실</h2>
+		<fieldset>
+			<legend>자료목록</legend>
+			<div>
+				<input type="button" value="파일 업로드" onclick='location.href"='fileBbsUploadForm.jsp'>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>파일명</th>
+						<th>작성자</th>
+					</tr>
+				</thead>
+			</table>
+		</fieldset>
+	</article>
+</section>
+<%@include file="/footer.jsp"%>
+</body>
+</html>

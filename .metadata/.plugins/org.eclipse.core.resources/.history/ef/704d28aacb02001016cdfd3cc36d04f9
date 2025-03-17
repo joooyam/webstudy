@@ -1,0 +1,8 @@
+package com.yong.filebbs;
+
+public class FileBbsDTO {
+	private int idx;
+	private String filename;
+	private String writer;
+
+}

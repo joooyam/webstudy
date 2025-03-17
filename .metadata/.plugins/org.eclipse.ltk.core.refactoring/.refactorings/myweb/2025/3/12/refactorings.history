@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;fileBbsUpload_ok.jsp&apos; to &apos;filebbs&apos;&#x0D;&#x0A;- Original project: &apos;myweb&apos;&#x0D;&#x0A;- Destination element: &apos;filebbs&apos;&#x0D;&#x0A;- Original element: &apos;fileBbsUpload_ok.jsp&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" element1="src/main/webapp/filebbs/files/fileBbsUpload_ok.jsp" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1742172751285" target="src/main/webapp/filebbs" units="0" version="1.0"/>
+</session>

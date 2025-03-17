@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="com.oreilly.servlet.*" %>
+
+<% // 250317 실습) 3.파일 처리하는 페이지   //슬러시가 제어문자로 생각하게 됨 컴퓨터가 그래서 기능이 있는 제어문자가 아니라고 알려주기 기능을 제거하기 위해 슬러시 하나 부탁하는 형식으로 하기
+//그렇게 문자열 지정해주기
+String savepath="C:/java_student/jspstudy/.metadata/.plugins"+ 
+	"/org.eclipse.wst.server.core/tmp0/wtpwebapps/myweb/filebbs";
+//savepath에 저장경로 저장 웹어플리케이션은 서비스 제공 myweb = 내 폴더
+MultipartRequest mr=
+	new MultipartRequest(request,savepath,1024*1024*10,"utf-8"); //생성자를 호출해 매개값을 request로 해주고 savepath를 두번째 매개값 + 용량 넣어야됨
+//업로드할 때의 인코딩 방식 "utf-8"
+
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>250317 실습 ) 3.파일 처리하는 페이지</title>
+</head>
+<body>
+
+</body>
+</html>

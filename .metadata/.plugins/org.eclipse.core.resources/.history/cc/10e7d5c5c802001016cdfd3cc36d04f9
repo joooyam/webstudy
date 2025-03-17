@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="com.oreilly.servlet.*" %>
+<% // 250317 실습 ) 3.파일 처리하는 페이지
+
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>250317 실습 ) 3.파일 처리하는 페이지</title>
+</head>
+<body>
+
+</body>
+</html>

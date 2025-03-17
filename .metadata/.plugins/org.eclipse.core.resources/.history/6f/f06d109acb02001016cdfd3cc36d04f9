@@ -1,0 +1,5 @@
+package com.yong.filebbs;
+
+public class FileBbsDTO {
+
+}

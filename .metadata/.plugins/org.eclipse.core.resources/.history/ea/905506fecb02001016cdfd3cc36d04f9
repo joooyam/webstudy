@@ -1,0 +1,12 @@
+package com.yong.filebbs;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class FileBbsDAO {
+	private Connection conn;
+	private PreparedStatement ps;
+	private ResultSet rs;
+
+}
