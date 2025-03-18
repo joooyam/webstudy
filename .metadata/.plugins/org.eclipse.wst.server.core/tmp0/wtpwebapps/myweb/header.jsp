@@ -35,7 +35,7 @@ function openLogin(){
             <li><a href="/myweb">Home</a></li><!-- 메뉴는 보통 링크로 감싸줘서 클릭대상자로 설정 -->
             <li><a href="#">Profile</a></li>
             <li><a href="#">자유게시판</a></li>
-            <li><a href="#">파일업로드</a></li>
+            <li><a href="/myweb/webfolder/webfolder.jsp">Yong드라이브</a></li> <!-- 웹폴더라는 전제로 절대경로 -->
             <li><a href="#">방명록</a></li>
          </ul>
       </nav>

@@ -1,5 +1,7 @@
 package com.yong.filebbs;
 
+//250317 파일 올리는 법
+
 public class FileBbsDTO {
 	private int idx;
 	private String filename;

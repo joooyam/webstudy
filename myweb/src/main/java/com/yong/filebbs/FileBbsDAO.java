@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+//250317 파일 올리는 법
+
 public class FileBbsDAO {
 	private Connection conn;
 	private PreparedStatement ps;

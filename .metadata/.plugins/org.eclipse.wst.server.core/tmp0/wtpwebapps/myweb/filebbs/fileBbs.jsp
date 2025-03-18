@@ -3,6 +3,9 @@
 <%@page import="java.util.*" %>
 <%@ page import="com.yong.filebbs.*" %>
 <jsp:useBean id="filedao" class="com.yong.filebbs.FileBbsDAO"></jsp:useBean>
+
+<!-- 250317 3. 파일 올린 것 조회-->
+
 <!DOCTYPE html>
 <html>
 <head>
