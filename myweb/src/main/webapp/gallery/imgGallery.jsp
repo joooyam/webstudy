@@ -46,7 +46,7 @@ img{
                   <%
                }else{
                   for(int i=0; i<arr.size(); i++){
-                  if(i!=0&&i%4==0){
+                  if(i!=0 && i%4==0){
                   %>
                   </tr><tr>
                   <%

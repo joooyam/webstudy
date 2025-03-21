@@ -2,7 +2,7 @@ package com.yong.wf;
 //파일에 대한 클래스 사용하므로 IO패키지 가져옴
 import java.io.*;
 
-////////////////////250319 사용자 정보 webfolder랑 연결
+////////////////////250319 사용자 정보 webfolder랑 연결 ~250320
 
 //필요한 정보들 : 용량,탐색기 필요할 때 사용자의 
 // 절대 경로 l c나 d의 절대 경로가 필요한데 request의 정보를 계쏙 가져올 수 있도록 basepath변수 만듦
@@ -11,6 +11,7 @@ public class WebFolderDAO {
 	private String basepath; //기본 경로 
 	private String userid; //사용할 계정 정보 (사용자 폴더 이름)    아이디 정보 모아드는 변수
 	private long totalsize,usedsize,freesize;  //용량 : int로 안되고 long으로 반환해줌 총용량,사용용량,남은 용량
+	private String crpath; //현재경로(현재위치 가리키는 것) //250320 4.탐색기 
 	
 	public WebFolderDAO() {  //초기화 개개인 사용자 마다 20메가 주기로 설정
 		totalsize=1024*1024*20; // 물리적 적용이 아니라 사용자에게 20메가만 안넘어가도록만 설정해주면 됨 사용용량=알 수 없음 (구해야됨 ),남은용량은(사용용량 알아야 구할 수 있음)
@@ -19,6 +20,17 @@ public class WebFolderDAO {
 		//사용용량을 생성자에서 초기화해줌 객체는 1번 만들어지면 USE.FREE는 초기화 1번해줌 근데 계쏙 해주게됨
 		
 	}
+	
+
+	public String getCrpath() {
+		return crpath;
+	}
+
+
+	public void setCrpath(String crpath) {
+		this.crpath = crpath;
+	}
+
 
 	public String getBasepath() {
 		return basepath;
@@ -110,5 +122,40 @@ public class WebFolderDAO {
 		}
 		
 	}
+	
+	/**단일 파일 및 폴더 삭제 관련 메서드*/
+	public void oneFileDelete(String target) { //삭제 하려면 이름있 필요 - string타입 인자 받음 가져오기 위해서
+		File f=new File(basepath+"/"+crpath+"/"+target);//경로를 통해 파일 객체 가져올 것임
+		if(f.isFile()) {
+			f.delete();
+		}else {
+			f.delete(); //파일 하나일 때 삭제되지만 / 폴더는 삭제는 안됨
+		}
+	}
+	
+	/**폴더 일 때 삭제 기능관련메서드*/ //폴더일때이므로 public누구나 접근가능하게함 (삭제할 대상 매개값으로 받음
+	public void deleteFolders(File f) {
+		File files[]=f.listFiles();
+		for(int i=0; i<files.length; i++) {
+			if(files[i].isFile()) {
+				files[i].delete();
+			}else {
+				deleteFolders(files[i]); //기능 반복해서 삭제할 수 있음 메서드 재탕한 것..?
+				files[i].delete();//폴더일때 삭제할 수 있는 녀석 재탕가능함 =
+				
+			}
+		}
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
 
