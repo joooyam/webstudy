@@ -4,7 +4,8 @@
 <%@page import="com.oreilly.servlet.*" %>
 <jsp:useBean id="wf" class="com.yong.wf.WebFolderDAO" scope="session"></jsp:useBean>
 <%
-response.setContentType("text/html;charset=utf-8");
+
+//request.setCharacterEncoding("UTF-8");
 String uploadfol=request.getParameter("uploadfol");
 File f=new File(wf.getBasepath()+"/"+wf.getCrpath()+"/"+uploadfol); //getUserid에서 바꿔줌
 f.mkdir();

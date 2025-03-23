@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form name="folderupload" action="uploadFol_ok.jsp" method="post">
+<form name="folderupload" action="uploadFol_ok.jsp" method="get">
 <fieldset>
 	<legend>폴더올리기</legend>
 	<ul>
