@@ -13,4 +13,6 @@
     <fullyQualifiedTypeName name="java.sql.Array"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.security.DrbgParameters.NextBytes"/>
+    <fullyQualifiedTypeName name="java.sql.SQLClientInfoException"/>
 </qualifiedTypeNameHistroy>

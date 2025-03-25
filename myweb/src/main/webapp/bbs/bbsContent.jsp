@@ -58,9 +58,10 @@ if(dto==null){
 					<td colspan="4" align="left" valign="top">
 					<%=dto.getContent().replaceAll("\n","<br>")%></td>
 				</tr>
-				<tr>
-					<td colspan="4" align="center">목록으로</td>
-				</tr>
+				<tr>		<%//본문글에 대한 ref 따라가야됨 답변쓰기는 내 본문에 대한 내 ref,lev,sun정보 가져와야됨 = 파라미터 활용 파라미터 하나씩 넘김%>
+					<td colspan="4" align="center"> <%//본문보기 콘텐츠에서 답변쓰기 넘어갈때 본문글에 대한 제목,ref,lev,,,다 가져와야됨 %>
+					목록으로 ㅣ <a href="bbsReWrite.jsp?title=<%=dto.getTitle()%>&ref=<%=dto.getRef()%>&lev=<%=dto.getLev()%>&sunbun=<%=dto.getSunbun()%>">답글쓰기</a></td> 
+				</tr><%//타이틀이 가지고 있는 키 값으로 getTitle이 갖고 있으므로 가져옴 & 쓰는 이유도 알보기 %>
 			</table>
 		</fieldset>
 	</article>

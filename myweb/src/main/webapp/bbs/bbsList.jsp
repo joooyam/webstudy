@@ -30,7 +30,7 @@ table thead th {
 // 총 게시물 수
 int totalCnt = bdao.getTotalCnt(); //db로 부터 조회하는 것이 기본 //56개의 게시물
 // 보여줄 리스트 수
-int listSize = 5; //5개씩 보여주기 인위적으로 내 맘대로 적용
+int listSize = 15; //5개씩 보여주기 인위적으로 내 맘대로 적용
 //보여줄 페이지 수
 int pageSize = 5;
 //사용자의 현재 위치
@@ -45,7 +45,7 @@ int cp = Integer.parseInt(cp_s);
 
 // 총 페이지 수
 int totalPage = (totalCnt / listSize) + 1; //공식 / ㄴ딱 나눠떨어질 땐 하나 많은 상황 발생하므로
-if (totalCnt % listSize == 0)
+if (totalCnt % listSize == 0) //딱떨어지면 줄여서 
 	totalPage--;
 
 //사용자가 어떤 그룹에 속해있는 지 확인
@@ -106,15 +106,27 @@ if (cp % pageSize == 0)
 					if (arr == null || arr.size() == 0) {
 					%>
 					<tr>
-						<td colspan="5" align="center">등록된 게시글이 없습니다</td>
+						<td colspan="5" align="center">
+						등록된 게시글이 없습니다
+						</td>
 					</tr>
 					<%
+					
 					} else {
 					for (int i = 0; i < arr.size(); i++) {
 					%>
 					<tr>
 						<td><%=arr.get(i).getIdx()%></td>
-						<td><a href="bbsContent.jsp?idx=<%=arr.get(i).getIdx()%>"><%=arr.get(i).getTitle()%></a>
+						<td>
+						<%
+						
+///////////////////////////////////답변형 처럼 공백으로 만들어줌///////////////////////////////////////////
+						for(int z=0; z<arr.get(i).getLev(); z++){
+							out.println("&nbsp;&nbsp;");
+						}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+						%>
+						<a href="bbsContent.jsp?idx=<%=arr.get(i).getIdx()%>"><%=arr.get(i).getTitle()%></a>
 						</td>
 						<td><%=arr.get(i).getWriter()%></td>
 						<td><%=arr.get(i).getWritedate()%></td>
