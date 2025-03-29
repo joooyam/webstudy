@@ -23,7 +23,7 @@ if (result==mdao.LOGIN_OK) {
    session.setAttribute("sid", userid); //아이디는 사용자의 요구사항에 따라 아이디가 저장해야될지 결정
    session.setAttribute("sname", username);
    
-   //아이디 기억 순서 2 null이 아닐 때만 쿠키 생성해주기
+   //아이디 기억 순서 2 null이 아닐 때만 쿠키 생성해주기  
    if(saveid!=null){
 	  Cookie ck=new Cookie("saveid",userid);
 	  ck.setMaxAge(60*60*24*30);

@@ -8,6 +8,7 @@ request.setCharacterEncoding("utf-8");
 %>
 <!--  -->
 <jsp:useBean id="mdto" class="com.yong.member.MemberDTO"></jsp:useBean>
+<!-- MemberDTO mdto=new MemberDTO(); -->
 <jsp:setProperty property="*" name="mdto" />
 <jsp:useBean id="mdao" class="com.yong.member.MemberDAO"></jsp:useBean>
 <%

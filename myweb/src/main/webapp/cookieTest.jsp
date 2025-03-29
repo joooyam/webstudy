@@ -18,7 +18,7 @@ Cookie cks[]=request.getCookies();
 if(cks!=null){
 	for(int i=0; i<cks.length; i++){
 		String key=cks[i].getName();
-	//3.값 취득
+	//3.값 취득  
 		//String value=cks[i].getValue();
 		String value=URLDecoder.decode(cks[i].getValue());
 		
