@@ -17,6 +17,7 @@ String saveid=request.getParameter("saveid"); //아이디 기억 아이디 어�
 
 int result = mdao.loginCheck(userid, userpwd);
 
+
 if (result==mdao.LOGIN_OK) { //login_ok==3
    //로그인 ok일 때 수행되어야함 //사 용자 id 가져와야함
    String username=mdao.getUserInfo(userid);
