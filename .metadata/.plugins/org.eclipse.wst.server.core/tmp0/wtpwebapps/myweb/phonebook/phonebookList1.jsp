@@ -37,7 +37,7 @@
 	        ResultSet rs=ps.executeQuery(); //resultset으로 결과 반환
 	       
 	        if(rs.next()){ 
-	        	//너 데이터있니
+	        	//너 데이터있니 
 	        	//if문으로 조건주는 것은 do while 이용하기
 	        	do{
 	       	%>

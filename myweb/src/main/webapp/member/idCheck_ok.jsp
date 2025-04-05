@@ -6,7 +6,7 @@
  String userid=request.getParameter("userid");
  boolean result=mdao.idCheck(userid); //false면 데이터 없고 true면 데이터 있는 것
 
- if(result){
+ if(result){  
     %>
     <script>
     window.alert('이미 가입되어있는 아이디입니다.');
