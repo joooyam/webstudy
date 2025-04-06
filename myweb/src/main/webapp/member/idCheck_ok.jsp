@@ -17,7 +17,7 @@
     %>
     <script>
     window.alert('<%=userid%>는 사용가능한 아이디입니다.');
-    //나를 가르키는 키워드 opener
+    //나를 가르키는 키워드 opener    
     opener.document.memberJoin.id.value='<%=userid%>';
     window.self.close();
     </script>
